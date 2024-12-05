@@ -1166,6 +1166,17 @@ const char* cc_RescaleInPlace_docs = R"pbdoc(
     :type ciphertext: Ciphertext
 )pbdoc";
 
+const char* cc_Compress_docs = R"pbdoc(
+    Compress - OpenFHE Compress method used only for BGV/CKKS.
+
+    :param ciphertext: ciphertext
+    :type ciphertext: Ciphertext
+    :param towersLeft: number of RNS limbs after compressing
+    :type towersLeft: int
+    :return: Ciphertext: compressed ciphertext
+    :rtype: Ciphertext
+)pbdoc";
+
 const char* cc_ModReduce_docs = R"pbdoc(
     ModReduce - OpenFHE ModReduce method used only for BGV/CKKS.
 

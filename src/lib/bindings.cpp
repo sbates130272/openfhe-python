@@ -573,6 +573,10 @@ void bind_crypto_context(py::module &m)
         .def("RescaleInPlace", &CryptoContextImpl<DCRTPoly>::RescaleInPlace,
              cc_RescaleInPlace_docs,
              py::arg("ciphertext"))
+        .def("Compress", &CryptoContextImpl<DCRTPoly>::Compress,
+             cc_Compress_docs,
+             py::arg("ciphertext"),
+             py::arg("towersLeft") = 1)
         .def("ModReduce", &CryptoContextImpl<DCRTPoly>::ModReduce,
              cc_ModReduce_docs,
              py::arg("ciphertext"))
